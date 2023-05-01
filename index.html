@@ -6,18 +6,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/styles.css" />
+    <!-- JAVA GOOGLE ADD --><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2089024935925599" crossorigin="anonymous"></script>
+<!-- ¿Hay CSS GOOGLE ADD? -->
     <link rel="shortcut icon" href="./assets/Icono-ANLU.ico" type="image/x-icon" />
     <title>Aventuras de Violeta</title>
 </head>
 <body>
 <!-- INICIO HEADER -->
     <header>
-        <nav class="navbar fixed-top navbar--propio">
+        <nav class="navbar navbar--propio">
             <div class="container-lg">
               <a class="navbar-brand" href="#"><img class="navbar__img" src="./assets/png/titulo.png" alt="Las aventuras de violeta" /></a>
               <button class="navbar-toggler navbar__ico" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
+<!-- INICIO MENU DESPLEGABLE -->
               <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header navbar__div__offcanvas--title">
                   <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU PRINCIPAL</h5>
@@ -46,22 +49,81 @@
                   </form>
                 </div>
               </div>
+<!-- FIN MENU DESPLEGABLE -->
             </div>
         </nav>
     </header>
 <!-- FIN HEADER -->
 <!-- INICIO MAIN  -->
     <main class="container-lg">
-        <section class="sectio">
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-8 main__div--info">
+                <p class="section__p">
+                    Esta es la historia de mis aventuras.  Con Melany y mis amigos aprendimos a ser sabias, 
+                    poetas y actrices en un viaje divertidísimo. Me llena de contentura compartírselos para recorrerlo juntas. 
+                    Vamos a poder conocernos compartiendo experiencias personales, ideas y cosas raras.
+                    ¡Chequea que estilo de aventura queres emprender, prepara tus cosas y vamos!  
+                </p>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+<!-- INICIO GOOGLE ADD  -->
+                <aside class="aside">
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2089024935925599" data-ad-slot="2556115573" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                </aside>
+<!-- FIN GOOGLE ADD -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-8 main__div--info">
+                <h3>LOGUEATE Y EMPEZA TU AVENTURA.</h3>
+                <form action="php" method="post" enctype="text/plain">
+                    <div>
+                        <label for="contraseña">Contraseña</label>
+                        <input type="password" placeholder="top secret" name="" id="contraseña" />
+                    </div>
+                    <div>
+                        <label for="usuario">Jugador</label>
+                        <input type="text" placeholder="tu apodo en el juego" id="usuario" />
+                    </div>
+                    <div>
+                        <button>
+                            Crear cuenta
+                        </button>
+                        <input type="button" value="Iniciar sesión">
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+<!-- INICIO GOOGLE ADD  -->
+                <aside class="aside">
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2089024935925599" data-ad-slot="2556115573" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                </aside>
+<!-- FIN GOOGLE ADD -->
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- <section class="section">
             <p class="section__p">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dicta, unde maxime non nulla fuga labore officiis quidem sunt magnam rerum libero, ipsam, architecto quasi saepe cum odit blanditiis illo.
+                Esta es la historia de mis aventuras.  Con Melany y mis amigos aprendimos a ser sabias, 
+                poetas y actrices en un viaje divertidísimo. Me llena de contentura compartírselos para recorrerlo juntas. 
+                Vamos a poder conocernos compartiendo experiencias personales, ideas y cosas raras.
+                ¡Chequea que estilo de aventura queres emprender, prepara tus cosas y vamos!  
             </p>
-        </section>
-        <aside class="aside">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis vitae iusto laboriosam! Optio ad neque amet dolorum? Harum pariatur blanditiis iure sequi hic maiores minus voluptate? Unde quaerat illum repudiandae?</p>
-        </aside>
-        <section class="section">
-            <h3>Logueate y empeza tu aventura.</h3>
+        </section> -->
+        <!-- <section class="section">
+            <h3 class="section__h3" >LOGUEATE Y EMPEZA TU AVENTURA.</h3>
             <form action="">
                 <div class="section__div" >
                     <label for="contraseña">Contraseña</label>
@@ -78,9 +140,11 @@
                     <input type="button" value="Iniciar sesión">
                 </div>
             </form>
-        </section>
+        </section> -->
 
     </main>
+<!-- FIN MAIN  -->
+<!-- INCIO FOOTER -->
     <footer class="container-lg">
         <a href="#">
             <img class="footer__ico" src="./assets/png/Icono-facebook.png" alt="Facebook">
@@ -95,6 +159,6 @@
             <img class="footer__ico" src="./assets/png/ANLU-PLAY.png" alt="Juguetería">
         </a>
     </footer>
-    
+<!-- FIN FOOTER -->
 </body>
 </html>

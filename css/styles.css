@@ -35,7 +35,6 @@ body{
     background-image: url(../assets/jpg/fondo-navbar.jpg);
     background-size: cover ; 
     background-attachment: fixed;
-    background-position: center;
 }
 .navbar__img {
     min-width: 120px;
@@ -68,12 +67,13 @@ body{
     min-width: 15px;
     width: 4vw;
 }
-.navbar__div__offcanvas--title {
+.navbar__div__offcanvas {
+    box-shadow: -10px 10px 8px gray;
     background-image: url(../assets/jpg/hoja-cartulina-2.jpg);
     background-attachment: fixed;
-
+}
+.navbar__div__offcanvas--title {
     color: grey;
-    box-shadow: 8px 8px 10px bisque;
 }
 .navbar__div__offcanvas--title h5 {
 position: relative;
@@ -115,53 +115,61 @@ right: -25%;
 }
 /* Fin Header */
 /* Inicio Main */
-main {
-    display: grid;
-    grid-template-columns: 1 fr;
-    grid-template-rows: repeat(3, auto);
-    gap: 10px;
-    
-    
-}
-.section{
-    background-image: url(../assets/jpg/hoja-cartulina-1.jpg);
+.main__div--info{
+    background-image: url(../assets/jpg/hoja-cartulina-2.jpg);
     background-attachment: fixed;
     background-size: 100% 100%;
 
     border-radius: 15px;
     margin: 15px;
     padding: 3vw;
+    max-width: 600px;
 
     box-shadow: 8px 8px 10px gray;
-
-    grid-area: ;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.section__p {
+.main__div--info p {
     font-size: 18px;
     font-stretch: 1.5;
-    text-align: justify;
+    text-align: center;
     text-indent: 10px;
     line-height: 1.5;
 }
-.section__div {
+.main__div--info h3{
+    text-justify: center;
+    text-align: center;
+    margin: 5px auto;
+}
+.main__div--info form div{
     display:block;
     margin: 10px;
     text-align: center;
 }
-.aside {
+/* INICIO MAIN__ESTILOS-DE-AVENTURA */
+.main__div--card{
+    background-image: url(../assets/jpg/hoja-cartulina-2.jpg);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
+    border-radius: 15px;
+    padding: 3vw;
+ 
+
+    box-shadow: 8px 8px 10px gray;
+
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    margin: 15px 0px;
-    grid-area: publi;
+    align-items: center;
 }
 /* Fin Main */
+
+/* EXPERIMENTOS */
+
 /* Footer */
 footer {
     display: flex;
@@ -174,10 +182,4 @@ footer {
 }
 /* Media */
 @media (min-width: 768px) {
-    .header__ul {
-        display: flex;
-    }  
-    .header__ico {
-        display: none;
-    }
 }
