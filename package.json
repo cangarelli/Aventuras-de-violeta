@@ -1,0 +1,14 @@
+{
+  "name": "aventuras-de-violeta",
+  "version": "1.0.0",
+  "description": "Es un proyecto destinado al aprendizaje de desarrollo web",
+  "main": "index.js",
+  "scripts": {
+    "crear-sass": "sass ./sass/main.scss ./css/style.css -w"
+  },
+  "author": "Andres Garelli",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.62.1"
+  }
+}
