@@ -139,7 +139,7 @@ right: -25%;
     margin: 10px;
     text-align: center;
 }
-/* INICIO MAIN__ESTILOS-DE-AVENTURA */
+/* INICIO MAIN ESTILOS-DE-AVENTURA */
 .contenedor1 {
     display: flex;
     justify-content: center;
@@ -160,6 +160,32 @@ right: -25%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+/* INICIO MAIN CONSOLA HTML */
+.cajaDeTexto{
+    background-image: url(../assets/jpg/hoja-cartulina-2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    text-align: center; 
+    color: gray;
+    font-size: 24px;
+
+    width: 50vw ;
+   
+    border-radius: 20px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 3vh;
+    margin: auto;
+    margin-top: 15vh;
+    box-shadow: 0px 10px 10px 2px gray;
+}
+.cajaDeTexto--img {
+    max-height: 20vw;
+}
+.cajaDeTexto--texto {
+    margin: 3vh auto;
 }
 /* Fin Main */
 
