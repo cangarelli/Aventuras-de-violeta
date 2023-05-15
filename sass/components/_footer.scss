@@ -1,0 +1,18 @@
+.pie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &--icono{
+        width: 10vw;
+        margin: 1vw;
+    }
+}
+
+@media (min-width: $bp-extrasmall) {
+    
+    .pie--icono{
+        width: 35px;
+        margin: 15px;
+    }
+}

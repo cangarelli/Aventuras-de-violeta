@@ -1,5 +1,119 @@
+* {
+  font-family: "gochihand";
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  background-repeat: no-repeat;
+}
+
+@font-face {
+  font-family: "gochihand";
+  src: url(../assets/fonts/GochiHand-Regular.ttf);
+}
 body {
-  background-color: 0;
+  background-color: antiquewhite;
+  background-image: url(../assets/jpg/Fondo-pagina.jpg);
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+.barranav {
+  background-image: url(../assets/jpg/fondo-navbar.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+.barranav__img {
+  min-width: 120px;
+  max-width: 130px;
+  width: 15vw;
+  padding: 10px;
+  border-radius: 10px;
+  background-image: url(../assets/jpg/retazo-hoja-menu.jpg);
+  background-position: center;
+  background-attachment: local;
+  box-shadow: 6px 6px 8px black;
+}
+.barranav__img:hover {
+  box-shadow: 6px 6px 8px violet;
+}
+.barranav__ico {
+  border-radius: 10px;
+  padding-top: 2px;
+  padding-left: 2px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  background-image: url(../assets/jpg/retazo-hoja-menu.jpg);
+  background-position: center;
+  background-attachment: local;
+}
+.barranav__ico:hover {
+  min-width: 15px;
+  width: 2.5vw;
+  height: 35px;
+}
+.barranav__offcanvas {
+  box-shadow: -10px -10px 8px black;
+  background-image: url(.../assets/jpg/hoja-cartulina-2.jpg);
+  background-attachment: fixed;
+}
+.barranav__offcanvas--title {
+  color: grey;
+}
+.barranav__offcanvas--title h5 {
+  position: relative;
+  right: -25%;
+}
+.barranav__offcanvas--title img {
+  min-width: 15px;
+  max-width: 20px;
+  width: 4vw;
+  position: absolute;
+  top: 1%;
+  right: 75%;
+  transform: rotate(19deg);
+}
+.barranav__offcanvas--body {
+  background-image: url(.../assets/jpg/hoja-cartulina-2.jpg);
+  background-attachment: fixed;
+  margin-top: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.barranav__offcanvas--body img {
+  min-width: 15px;
+  max-width: 20px;
+  width: 4vw;
+  position: absolute;
+  top: 34%;
+  right: 25%;
+}
+.barranav__offcanvas--body ul {
+  align-items: center;
+  justify-content: start;
+}
+.barranav__offcanvas--body ul li:hover {
+  text-shadow: 8px 8px 10px violet;
+}
+
+.pie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pie--icono {
+  width: 10vw;
+  margin: 1vw;
+}
+
+@media (min-width: 480px) {
+  .pie--icono {
+    width: 35px;
+    margin: 15px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
