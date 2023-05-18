@@ -1,9 +1,10 @@
 * {
   font-family: "gochihand";
+  color: gray;
+  text-decoration: none;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  text-decoration: none;
   list-style: none;
   background-repeat: no-repeat;
 }
@@ -13,10 +14,40 @@
   src: url(../assets/fonts/GochiHand-Regular.ttf);
 }
 body {
-  background-color: antiquewhite;
+  background-color: rgb(192, 164, 140);
   background-image: url(../assets/jpg/Fondo-pagina.jpg);
   background-size: 100% 100%;
   background-attachment: fixed;
+}
+
+.marco, main {
+  max-width: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 992px) {
+  .marco, main {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .marco, main {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .marco, main {
+    max-width: 1320px;
+  }
+}
+
+.cardBox, .contenedor__formCard, .contenedor__infoCard {
+  background-image: url(../assets/jpg/hoja-cartulina-2.jpg);
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  border-radius: 5%;
+  margin: 1%;
+  padding: 3%;
+  box-shadow: 8px 8px 10px gray;
 }
 
 .barranav {
@@ -101,6 +132,7 @@ body {
 
 .pie {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -111,8 +143,87 @@ body {
 
 @media (min-width: 480px) {
   .pie--icono {
-    width: 35px;
+    width: 30px;
     margin: 15px;
+  }
+  h4 {
+    color: white;
+  }
+}
+.contenedor {
+  display: grid;
+  grid-template-columns: repeat 1, 1fr;
+  column-gap: 20px;
+  align-content: center;
+  justify-content: center;
+}
+@media (min-width: 576px) {
+  .contenedor {
+    grid-template-columns: repeat 2, 1fr;
+  }
+}
+@media (min-width: 768px) {
+  .contenedor {
+    grid-template-columns: repeat 3, 1fr;
+  }
+}
+@media (min-width: 576px) {
+  .contenedor {
+    grid-template-areas: "info publi" "form .";
+  }
+}
+@media (min-width: 768px) {
+  .contenedor {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: ". info publi" ". form publi";
+  }
+}
+.contenedor__infoCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contenedor__infoCard p {
+  font-size: 18px;
+  font-stretch: 1.5;
+  text-align: center;
+  text-indent: 10px;
+  line-height: 1.5;
+}
+@media (min-width: 576px) {
+  .contenedor__infoCard {
+    grid-area: info;
+  }
+}
+.contenedor__formCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contenedor__formCard h3 {
+  text-justify: center;
+  text-align: center;
+  margin: 1% auto;
+}
+.contenedor__formCard form div {
+  display: block;
+  margin: 15px 0;
+  text-align: center;
+}
+.contenedor__formCard form div button {
+  text-decoration: none;
+  color: gray;
+}
+@media (min-width: 576px) {
+  .contenedor__formCard {
+    grid-area: form;
+  }
+}
+@media (min-width: 576px) {
+  .contenedor__alLado {
+    grid-area: publi;
   }
 }
 

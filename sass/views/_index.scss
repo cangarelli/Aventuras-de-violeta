@@ -1,0 +1,71 @@
+main { 
+    @extend .marco;
+}
+.contenedor {
+
+    @include templateGrid (1, 2, 3);
+    align-content: center;
+    justify-content: center;
+
+    @media (min-width: $bp-small) {
+        grid-template-areas:
+         "info publi"
+         "form .";
+    }
+
+    @media (min-width: $bp-medium) {
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas:
+         ". info publi"
+         ". form publi";
+    }
+
+    &__infoCard {
+        @extend .cardBox;
+        @include templateFlex (column, center, true);
+        p{
+            font-size: $font-text;
+            font-stretch: 1.5;
+            text-align: center;
+            text-indent: 10px;
+            line-height: 1.5;
+        }
+
+        @media (min-width: $bp-small) {
+            grid-area: info;
+        }
+    }
+
+    &__formCard {
+        @extend .cardBox;
+        @include templateFlex (column, center, true);
+            
+        h3 {        
+            text-justify: center;
+            text-align: center;
+            margin: 1% auto;
+        }
+        form {
+
+            div {
+                display:block;
+                margin: 15px 0;
+                text-align: center;
+
+                button {
+                    text-decoration: none;
+                    color: gray;
+                }
+            }
+        }
+        @media (min-width: $bp-small) {
+            grid-area: form;
+        }
+    }
+
+    &__alLado {
+        @media (min-width: $bp-small) {
+            grid-area: publi;
+        }
+    }
+}

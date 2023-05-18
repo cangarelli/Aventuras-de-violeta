@@ -1,9 +1,10 @@
 *{
     font-family: "gochihand";
+    color: $font-lapiz;
+    text-decoration: none;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    text-decoration: none;
     list-style: none;
     background-repeat: no-repeat;
 }
@@ -12,9 +13,60 @@
     src: url(../assets/fonts/GochiHand-Regular.ttf);
 }
 body {
-    background-color: antiquewhite;
+    background-color: rgb(192, 164, 140);
     background-image: url(../assets/jpg/Fondo-pagina.jpg);
     background-size: 100% 100%;
     background-attachment: fixed;
 }
+// Extend
+.marco {
+    max-width: 100%;
+    margin: 0 auto;
+    @media (min-width: $bp-large) {
+        max-width: 960px ;
+    }
+    @media (min-width: $bp-xlarge) {
+        max-width: 1140px;
+    }
+    @media (min-width: $bp-xxlarge) {
+        max-width: 1320px;
+    }
+}
+.cardBox {
+    background-image: url(../assets/jpg/hoja-cartulina-2.jpg);
+    background-attachment: fixed;
+    background-size: 100% 100%;
 
+    border-radius: 5%;
+    margin: 1%;
+    padding: 3%;
+    
+    box-shadow: 8px 8px 10px gray;
+}
+// Minxin
+// Formato de grid que debe ser invocado en el contenedor padre.
+@mixin templateGrid ($colMobile, $colTablet, $colDeskop) {
+    display: grid;
+    grid-template-columns: repeat ($colMobile, 1fr);
+    column-gap: 20px;
+
+    // Vista tablet
+    @media (min-width: $bp-small) {
+        grid-template-columns: repeat ($colTablet, 1fr);
+    }
+
+    // vista desktop
+    @media (min-width: $bp-medium) {
+        grid-template-columns: repeat ($colDeskop, 1fr);
+    }
+}
+// Formato de flex que debe ser invocado en el contenedor padre.
+@mixin templateFlex($direction, $justify, $aling) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    
+    @if ($aling == true) {
+        align-items: center;
+    }
+}

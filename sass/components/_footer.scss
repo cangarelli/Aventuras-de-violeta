@@ -1,8 +1,6 @@
 .pie {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+    @include templateFlex (column, center, true);
+
     &--icono{
         width: 10vw;
         margin: 1vw;
@@ -12,7 +10,10 @@
 @media (min-width: $bp-extrasmall) {
     
     .pie--icono{
-        width: 35px;
+        width: 30px;
         margin: 15px;
     }
+    h4{
+        color: $font-contraste;
+    } 
 }
