@@ -1,6 +1,6 @@
 .consola{
     @extend .hojaNotas;
-   
+    position: relative;
     text-align: center; 
     font-size: $font-menu;
 
@@ -20,5 +20,32 @@
     &--texto {
         margin: 3vh auto;
     }
+    &__focoLuz {
+        display: none;
+        position: absolute;
+        width: 15%;
+        min-width: 15px; 
+        top: 31%;
+        left: 65%;
+    } 
+    &__focoOscuro {
+        display: none;
+        position: absolute;
+        width: 9.9%;
+        min-width: 10px;
+        top: 33.3%;
+        left: 67.3%;
+        transform: scale(0.5) rotate(20deg);
+    }
 }
 
+@media (min-width:$bp-medium) {
+    .consola__focoOscuro {
+        display: inline;
+    }
+    .consola__focoLuz {
+        display: inline;
+        transform:scale(0.5) rotate(20deg);
+        animation: ideas 5s infinite;
+    }
+}

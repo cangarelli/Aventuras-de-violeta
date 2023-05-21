@@ -84,20 +84,12 @@ a{
 }
 
 // Animaciones 
-@keyframes spiner {
-    0% {transform: rotate(0);}
-    100% {transform: rotate(360deg);}
+@keyframes ideas {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
 } 
- @keyframes ponerfoto {
-    0% {transform: rotate(0deg) translate(0px) scale(1);}
-    100% {transform: rotate(45deg) translate(20px) scale(0.8)}
- }
-
-//  Extends para animaciones
-.foteada {
-    animation-name: ponerfoto;
-
-}
-.cargando {
-    animation-name: spiner;
+@keyframes ponerFoto {
+    from {transform: rotate(0deg) translate(0px) scale(1);}
+    to {transform: rotate(20deg) translate(20px) scale(0.7);}
 }

@@ -4,6 +4,7 @@
     img{
         display: none;
         position: absolute;
+        
     }
     &__tarjetas {
         @extend .cardBox;
@@ -23,6 +24,9 @@
             top: -8%;
             left: 38%;
             transform: rotate(20deg) scale(0.7);
+            transition: transform 2s;
+            // transition-property: transform;
+            // transition-duration: 2s;
         }
         &__tarjetas {
             max-width: 45%;
