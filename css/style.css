@@ -301,7 +301,7 @@ a {
     top: -8%;
     left: 38%;
     transform: rotate(20deg) scale(0.7);
-    transition: transform 2s;
+    transition: transform 5s;
   }
   .contenedorDeEstilos__tarjetas {
     max-width: 45%;
@@ -326,31 +326,37 @@ a {
 .consola--texto {
   margin: 3vh auto;
 }
-.consola__focoLuz {
+.consola__portaLampara {
   display: none;
   position: absolute;
-  width: 15%;
-  min-width: 15px;
-  top: 31%;
+  top: 35%;
   left: 65%;
 }
-.consola__focoOscuro {
+.consola__portaLampara--focoLuz {
   display: none;
-  position: absolute;
-  width: 9.9%;
+  width: 20%;
+  min-width: 15px;
+}
+.consola__portaLampara--focoOscuro {
+  display: none;
+  width: 12.9%;
   min-width: 10px;
-  top: 33.3%;
-  left: 67.3%;
-  transform: scale(0.5) rotate(20deg);
 }
 
 @media (min-width: 768px) {
-  .consola__focoOscuro {
-    display: inline;
+  .consola__portaLampara {
+    display: grid;
+    grid-template-areas: "porta";
   }
-  .consola__focoLuz {
+  .consola__portaLampara--focoOscuro {
     display: inline;
-    transform: scale(0.5) rotate(20deg);
+    grid-area: porta;
+    transform: scale(1) rotate(20deg) translate(30%, 19%);
+  }
+  .consola__portaLampara--focoLuz {
+    display: inline;
+    grid-area: porta;
+    transform: scale(1) rotate(20deg);
     animation: ideas 5s infinite;
   }
 }

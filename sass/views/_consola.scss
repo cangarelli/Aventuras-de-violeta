@@ -17,35 +17,46 @@
     &--img {
         max-height: 20vw;
     }
+    
     &--texto {
         margin: 3vh auto;
     }
-    &__focoLuz {
+    &__portaLampara {
         display: none;
         position: absolute;
-        width: 15%;
-        min-width: 15px; 
-        top: 31%;
+        top: 35%;
         left: 65%;
-    } 
-    &__focoOscuro {
-        display: none;
-        position: absolute;
-        width: 9.9%;
-        min-width: 10px;
-        top: 33.3%;
-        left: 67.3%;
-        transform: scale(0.5) rotate(20deg);
+
+        &--focoLuz {
+            display: none;
+            width: 20%;
+            min-width: 15px; 
+        } 
+        
+        &--focoOscuro {
+            display: none;
+            width: 12.9%;
+            min-width: 10px;
+        }
     }
+    
 }
 
 @media (min-width:$bp-medium) {
-    .consola__focoOscuro {
-        display: inline;
-    }
-    .consola__focoLuz {
-        display: inline;
-        transform:scale(0.5) rotate(20deg);
-        animation: ideas 5s infinite;
+    .consola__portaLampara {
+        display: grid; 
+        grid-template-areas: "porta";
+
+        &--focoOscuro {
+            display: inline;
+            grid-area: porta;
+            transform:scale(1) rotate(20deg) translate(30%, 19%);
+        }
+        &--focoLuz {
+            display: inline;
+            grid-area: porta;
+            transform:scale(1) rotate(20deg);
+            animation: ideas 5s infinite;
+        }
     }
 }
