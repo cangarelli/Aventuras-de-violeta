@@ -1,3 +1,4 @@
+// Referencias para todo el sitio.
 *{
     font-family: "gochihand";
     color: $font-lapiz;
@@ -18,8 +19,7 @@ body {
     background-size: 100% 100%;
     background-attachment: fixed;
 }
-// Extend
-.marco {
+main {
     max-width: 100%;
     margin: 0 auto;
     @media (min-width: $bp-large) {
@@ -32,19 +32,32 @@ body {
         max-width: 1320px;
     }
 }
-.cardBox {
+a{
+    text-decoration: none;
+    color: $font-lapiz;
+}
+
+// Extend
+.hojaMenu {
+    background-image: url(../assets/jpg/retazo-hoja-menu.jpg);
+    background-position: center;
+    background-attachment: local;
+}
+.hojaNotas{
     background-image: url(../assets/jpg/hoja-cartulina-2.jpg);
     background-attachment: fixed;
     background-size: 100% 100%;
-
-    border-radius: 5%;
+}
+.cardBox {
+    @extend .hojaNotas;
+    border-radius: 15px;
     margin: 1%;
     padding: 3%;
     
     box-shadow: 8px 8px 10px gray;
 }
-// Minxin
-// Formato de grid que debe ser invocado en el contenedor padre.
+
+// Minxin 
 @mixin templateGrid ($colMobile, $colTablet, $colDeskop) {
     display: grid;
     grid-template-columns: repeat ($colMobile, 1fr);
@@ -60,7 +73,6 @@ body {
         grid-template-columns: repeat ($colDeskop, 1fr);
     }
 }
-// Formato de flex que debe ser invocado en el contenedor padre.
 @mixin templateFlex($direction, $justify, $aling) {
     display: flex;
     flex-direction: $direction;
@@ -69,4 +81,23 @@ body {
     @if ($aling == true) {
         align-items: center;
     }
+}
+
+// Animaciones 
+@keyframes spiner {
+    0% {transform: rotate(0);}
+    100% {transform: rotate(360deg);}
+} 
+ @keyframes ponerfoto {
+    0% {transform: rotate(0deg) translate(0px) scale(1);}
+    100% {transform: rotate(45deg) translate(20px) scale(0.8)}
+ }
+
+//  Extends para animaciones
+.foteada {
+    animation-name: ponerfoto;
+
+}
+.cargando {
+    animation-name: spiner;
 }

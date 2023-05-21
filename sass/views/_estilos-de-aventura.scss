@@ -1,7 +1,32 @@
-// .estilos {
-//     @include templateFlex (row, center, true);
-//     &__tarjetas {
+.contenedorDeEstilos {
+    @include templateFlex (column, center, true);
+    position: relative;
+    img{
+        display: none;
+        position: absolute;
+    }
+    &__tarjetas {
+        @extend .cardBox;
+        @include templateFlex (column, center, true);
+        max-width: 95%;
+        h1{
+            text-align: center;
+        }
+    }
 
-//     }
-
-// }
+}
+@media (min-width: $bp-medium) {
+    .contenedorDeEstilos {
+        @include templateFlex (row, center, false);
+        img{
+            display: inline-block;
+            top: -8%;
+            left: 38%;
+            transform: rotate(20deg) scale(0.7);
+        }
+        &__tarjetas {
+            max-width: 45%;
+            
+        }
+    }
+}

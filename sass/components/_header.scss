@@ -2,32 +2,29 @@
     background-image: url(../assets/jpg/fondo-navbar.jpg);
     background-size: cover ; 
     background-attachment: fixed;
+
     &__img{
         min-width: 120px;
         max-width: 130px;
         width: 15vw; 
         padding: 10px;
-        border-radius: 10px;
-        
-        background-image: url(../assets/jpg/retazo-hoja-menu.jpg);
-        background-position: center;
-        background-attachment: local;
-    
+        border-radius: 10px;        
+        @extend .hojaMenu;
         box-shadow: 6px 6px 8px black;
+        
         &:hover{
             box-shadow: 6px 6px 8px violet;
         }
     }
+
     &__ico{
         border-radius: 10px;
         padding-top: 2px;
         padding-left: 2px;
         padding-bottom: 5px;
-        padding-right: 5px;
-    
-        background-image: url(../assets/jpg/retazo-hoja-menu.jpg);
-        background-position: center;
-        background-attachment: local;
+        padding-right: 5px;    
+        @extend .hojaMenu;
+
         &:hover{
             min-width: 15px;
             width: 2.5vw;
@@ -36,14 +33,16 @@
     }
     &__offcanvas {
         box-shadow: -10px -10px 8px black;
-        background-image: url(.../assets/jpg/hoja-cartulina-2.jpg);
-        background-attachment: fixed;
+        @extend .hojaNotas;
+        
         &--title {
-            color: grey;
+            
             h5{
                 position: relative;
                 right: -25%;
+                font-size: $font-menu;
             }
+            
             img{
                 min-width: 15px;
                 max-width: 20px;
@@ -54,27 +53,24 @@
                 transform: rotate(19deg);
             }
         }
+
         &--body{
-            background-image: url(.../assets/jpg/hoja-cartulina-2.jpg);
-            background-attachment: fixed;
+            @extend .hojaNotas;
             margin-top: 15px;
             position: relative;
-            
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            @include templateFlex (column, start, true);
 
             img{
-                min-width: 15px;
-                max-width: 20px;
-                width: 4vw;
-                position: absolute;
-                top: 34%;
-                right: 25%;
+                min-width: 25px;
+                max-width: 50px;
+                width: 20vw;
+                transform: translate(190%, -40%);
             }
+            
             ul{
                 align-items: center;
                 justify-content: start;
+                font-size: $font-menu;
                 li:hover{
                     text-shadow: 8px 8px 10px violet;
                 }

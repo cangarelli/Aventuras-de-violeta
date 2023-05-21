@@ -20,34 +20,72 @@ body {
   background-attachment: fixed;
 }
 
-.marco, main {
+main {
   max-width: 100%;
   margin: 0 auto;
 }
 @media (min-width: 992px) {
-  .marco, main {
+  main {
     max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  .marco, main {
+  main {
     max-width: 1140px;
   }
 }
 @media (min-width: 1400px) {
-  .marco, main {
+  main {
     max-width: 1320px;
   }
 }
 
-.cardBox, .contenedor__formCard, .contenedor__infoCard {
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+.hojaMenu, .barranav__ico, .barranav__img {
+  background-image: url(../assets/jpg/retazo-hoja-menu.jpg);
+  background-position: center;
+  background-attachment: local;
+}
+
+.hojaNotas, .consola, .barranav__offcanvas--body, .barranav__offcanvas, .cardBox, .contenedorDeEstilos__tarjetas, .contenedor__formCard, .contenedor__infoCard {
   background-image: url(../assets/jpg/hoja-cartulina-2.jpg);
   background-attachment: fixed;
   background-size: 100% 100%;
-  border-radius: 5%;
+}
+
+.cardBox, .contenedorDeEstilos__tarjetas, .contenedor__formCard, .contenedor__infoCard {
+  border-radius: 15px;
   margin: 1%;
   padding: 3%;
   box-shadow: 8px 8px 10px gray;
+}
+
+@keyframes spiner {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes ponerfoto {
+  0% {
+    transform: rotate(0deg) translate(0px) scale(1);
+  }
+  100% {
+    transform: rotate(45deg) translate(20px) scale(0.8);
+  }
+}
+.foteada {
+  animation-name: ponerfoto;
+}
+
+.cargando {
+  animation-name: spiner;
 }
 
 .barranav {
@@ -61,9 +99,6 @@ body {
   width: 15vw;
   padding: 10px;
   border-radius: 10px;
-  background-image: url(../assets/jpg/retazo-hoja-menu.jpg);
-  background-position: center;
-  background-attachment: local;
   box-shadow: 6px 6px 8px black;
 }
 .barranav__img:hover {
@@ -75,9 +110,6 @@ body {
   padding-left: 2px;
   padding-bottom: 5px;
   padding-right: 5px;
-  background-image: url(../assets/jpg/retazo-hoja-menu.jpg);
-  background-position: center;
-  background-attachment: local;
 }
 .barranav__ico:hover {
   min-width: 15px;
@@ -86,15 +118,11 @@ body {
 }
 .barranav__offcanvas {
   box-shadow: -10px -10px 8px black;
-  background-image: url(.../assets/jpg/hoja-cartulina-2.jpg);
-  background-attachment: fixed;
-}
-.barranav__offcanvas--title {
-  color: grey;
 }
 .barranav__offcanvas--title h5 {
   position: relative;
   right: -25%;
+  font-size: 24px;
 }
 .barranav__offcanvas--title img {
   min-width: 15px;
@@ -106,25 +134,23 @@ body {
   transform: rotate(19deg);
 }
 .barranav__offcanvas--body {
-  background-image: url(.../assets/jpg/hoja-cartulina-2.jpg);
-  background-attachment: fixed;
   margin-top: 15px;
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: start;
   align-items: center;
 }
 .barranav__offcanvas--body img {
-  min-width: 15px;
-  max-width: 20px;
-  width: 4vw;
-  position: absolute;
-  top: 34%;
-  right: 25%;
+  min-width: 25px;
+  max-width: 50px;
+  width: 20vw;
+  transform: translate(190%, -40%);
 }
 .barranav__offcanvas--body ul {
   align-items: center;
   justify-content: start;
+  font-size: 24px;
 }
 .barranav__offcanvas--body ul li:hover {
   text-shadow: 8px 8px 10px violet;
@@ -136,20 +162,20 @@ body {
   justify-content: center;
   align-items: center;
 }
+.pie p {
+  color: white;
+}
 .pie--icono {
   width: 10vw;
   margin: 1vw;
 }
-
 @media (min-width: 480px) {
   .pie--icono {
     width: 30px;
     margin: 15px;
   }
-  h4 {
-    color: white;
-  }
 }
+
 .contenedor {
   display: grid;
   grid-template-columns: repeat 1, 1fr;
@@ -212,9 +238,18 @@ body {
   margin: 15px 0;
   text-align: center;
 }
-.contenedor__formCard form div button {
-  text-decoration: none;
-  color: gray;
+.contenedor__formCard form section {
+  display: block;
+  margin: 15px 0;
+  text-align: center;
+}
+.contenedor__formCard form section input {
+  padding: 2%;
+  border-radius: 5px;
+}
+.contenedor__formCard form section button {
+  padding: 2%;
+  border-radius: 5px;
 }
 @media (min-width: 576px) {
   .contenedor__formCard {
@@ -225,6 +260,63 @@ body {
   .contenedor__alLado {
     grid-area: publi;
   }
+}
+
+.contenedorDeEstilos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.contenedorDeEstilos img {
+  display: none;
+  position: absolute;
+}
+.contenedorDeEstilos__tarjetas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 95%;
+}
+.contenedorDeEstilos__tarjetas h1 {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .contenedorDeEstilos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .contenedorDeEstilos img {
+    display: inline-block;
+    top: -8%;
+    left: 38%;
+    transform: rotate(20deg) scale(0.7);
+  }
+  .contenedorDeEstilos__tarjetas {
+    max-width: 45%;
+  }
+}
+.consola {
+  text-align: center;
+  font-size: 24px;
+  width: 50vw;
+  border-radius: 20px;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 3vh;
+  margin: auto;
+  margin-top: 15vh;
+  box-shadow: 0px 10px 10px 2px gray;
+}
+.consola--img {
+  max-height: 20vw;
+}
+.consola--texto {
+  margin: 3vh auto;
 }
 
 /*# sourceMappingURL=style.css.map */

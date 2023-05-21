@@ -1,0 +1,24 @@
+.consola{
+    @extend .hojaNotas;
+   
+    text-align: center; 
+    font-size: $font-menu;
+
+    width: 50vw ;
+   
+    border-radius: 20px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 3vh;
+    margin: auto;
+    margin-top: 15vh;
+    box-shadow: 0px 10px 10px 2px gray;
+
+    &--img {
+        max-height: 20vw;
+    }
+    &--texto {
+        margin: 3vh auto;
+    }
+}
+
