@@ -32,7 +32,7 @@
             width: 20%;
             min-width: 15px; 
         } 
-        
+
         &--focoOscuro {
             display: none;
             width: 12.9%;
@@ -42,7 +42,7 @@
     
 }
 
-@media (min-width:$bp-medium) {
+@media (min-width:$bp-small) {
     .consola__portaLampara {
         display: grid; 
         grid-template-areas: "porta";
