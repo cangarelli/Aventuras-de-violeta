@@ -1,11 +1,7 @@
 .contenedorDeEstilos {
     @include templateFlex (column, center, true);
     position: relative;
-    img{
-        display: none;
-        position: absolute;
-        
-    }
+
     &__tarjetas {
         @extend .cardBox;
         @include templateFlex (column, center, true);
@@ -19,15 +15,7 @@
 @media (min-width: $bp-medium) {
     .contenedorDeEstilos {
         @include templateFlex (row, center, false);
-        img{
-            display: inline-block;
-            top: -8%;
-            left: 38%;
-            transform: rotate(20deg) scale(0.7);
-            transition: transform 5s;
-            // transition-property: transform;
-            // transition-duration: 2s;
-        }
+
         &__tarjetas {
             max-width: 45%;
             

@@ -19,6 +19,7 @@
 
     &__infoCard {
         @extend .cardBox;
+        margin: 2%;
         @include templateFlex (column, center, true);
         p{
             font-size: $font-text;
@@ -35,6 +36,7 @@
 
     &__formCard {
         @extend .cardBox;
+        margin: 2%;
         @include templateFlex (column, center, true);
             
         h3 {        
@@ -80,11 +82,13 @@
     }
 
     &__alLado {
+        display: none;
         p {
             color: $font-contraste;
             text-align: center;
         }
         @media (min-width: $bp-small) {
+            display: inline;
             grid-area: publi;
         }
     }

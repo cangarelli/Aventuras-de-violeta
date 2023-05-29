@@ -1,0 +1,9 @@
+.conceptoBox {
+    @extend .cardBox;
+    max-width: 80%;
+    p {
+        initial-letter: 0vw;
+        line-height: 1.5;
+        text-indent: 5%;
+    }
+}

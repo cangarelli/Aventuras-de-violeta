@@ -1,6 +1,7 @@
 // Referencias para todo el sitio.
 *{
     font-family: "gochihand";
+    font-size: $font-text;
     color: $font-lapiz;
     text-decoration: none;
     box-sizing: border-box;
@@ -36,7 +37,14 @@ a{
     text-decoration: none;
     color: $font-lapiz;
 }
-
+h1 {
+    font-size: $font-title;
+    text-align: center;
+}
+h2 {
+    font-size: $font-subTitle;
+    text-align: center;
+}
 // Extend
 .hojaMenu {
     background-image: url(../assets/jpg/retazo-hoja-menu.jpg);
@@ -51,7 +59,7 @@ a{
 .cardBox {
     @extend .hojaNotas;
     border-radius: 15px;
-    margin: 1%;
+    margin: 1% auto;
     padding: 3%;
     
     box-shadow: 8px 8px 10px gray;

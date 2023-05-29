@@ -1,5 +1,6 @@
 * {
   font-family: "gochihand";
+  font-size: 16px;
   color: gray;
   text-decoration: none;
   box-sizing: border-box;
@@ -45,21 +46,31 @@ a {
   color: gray;
 }
 
+h1 {
+  font-size: 26px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 20px;
+  text-align: center;
+}
+
 .hojaMenu, .barranav__ico, .barranav__img {
   background-image: url(../assets/jpg/retazo-hoja-menu.jpg);
   background-position: center;
   background-attachment: local;
 }
 
-.hojaNotas, .consola, .barranav__offcanvas--body, .barranav__offcanvas, .cardBox, .contenedorDeEstilos__tarjetas, .contenedor__formCard, .contenedor__infoCard {
+.hojaNotas, .consola, .barranav__offcanvas--body, .barranav__offcanvas, .cardBox, .crearCuenta, .conceptoBox, .contenedorDeEstilos__tarjetas, .contenedor__formCard, .contenedor__infoCard {
   background-image: url(../assets/jpg/hoja-cartulina-2.jpg);
   background-attachment: fixed;
   background-size: 100% 100%;
 }
 
-.cardBox, .contenedorDeEstilos__tarjetas, .contenedor__formCard, .contenedor__infoCard {
+.cardBox, .crearCuenta, .conceptoBox, .contenedorDeEstilos__tarjetas, .contenedor__formCard, .contenedor__infoCard {
   border-radius: 15px;
-  margin: 1%;
+  margin: 1% auto;
   padding: 3%;
   box-shadow: 8px 8px 10px gray;
 }
@@ -114,10 +125,10 @@ a {
 .barranav__offcanvas {
   box-shadow: -10px -10px 8px black;
 }
-.barranav__offcanvas--title h5 {
+.barranav__offcanvas--title h2 {
   position: relative;
   right: -25%;
-  font-size: 24px;
+  font-size: 22px;
 }
 .barranav__offcanvas--title img {
   min-width: 15px;
@@ -145,7 +156,7 @@ a {
 .barranav__offcanvas--body ul {
   align-items: center;
   justify-content: start;
-  font-size: 24px;
+  font-size: 22px;
 }
 .barranav__offcanvas--body ul li:hover {
   text-shadow: 8px 8px 10px violet;
@@ -200,13 +211,14 @@ a {
   }
 }
 .contenedor__infoCard {
+  margin: 2%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .contenedor__infoCard p {
-  font-size: 18px;
+  font-size: 16px;
   font-stretch: 1.5;
   text-align: center;
   text-indent: 10px;
@@ -218,6 +230,7 @@ a {
   }
 }
 .contenedor__formCard {
+  margin: 2%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -258,12 +271,16 @@ a {
     grid-area: form;
   }
 }
+.contenedor__alLado {
+  display: none;
+}
 .contenedor__alLado p {
   color: white;
   text-align: center;
 }
 @media (min-width: 576px) {
   .contenedor__alLado {
+    display: inline;
     grid-area: publi;
   }
 }
@@ -274,10 +291,6 @@ a {
   justify-content: center;
   align-items: center;
   position: relative;
-}
-.contenedorDeEstilos img {
-  display: none;
-  position: absolute;
 }
 .contenedorDeEstilos__tarjetas {
   display: flex;
@@ -296,13 +309,6 @@ a {
     flex-direction: row;
     justify-content: center;
   }
-  .contenedorDeEstilos img {
-    display: inline-block;
-    top: -8%;
-    left: 38%;
-    transform: rotate(20deg) scale(0.7);
-    transition: transform 5s;
-  }
   .contenedorDeEstilos__tarjetas {
     max-width: 45%;
   }
@@ -310,14 +316,11 @@ a {
 .consola {
   position: relative;
   text-align: center;
-  font-size: 24px;
-  width: 50vw;
+  font-size: 22px;
+  width: 70vw;
   border-radius: 20px;
-  padding-left: 1vw;
-  padding-right: 1vw;
-  padding-top: 3vh;
-  margin: auto;
-  margin-top: 15vh;
+  padding: 2vh 2vw;
+  margin: 10% auto;
   box-shadow: 0px 10px 10px 2px gray;
 }
 .consola--img {
@@ -329,7 +332,7 @@ a {
 .consola__portaLampara {
   display: none;
   position: absolute;
-  top: 35%;
+  top: 25%;
   left: 65%;
 }
 .consola__portaLampara--focoLuz {
@@ -358,6 +361,88 @@ a {
     grid-area: porta;
     transform: scale(1) rotate(20deg);
     animation: ideas 5s infinite;
+  }
+}
+.conceptoBox {
+  max-width: 80%;
+}
+.conceptoBox p {
+  initial-letter: 0vw;
+  line-height: 1.5;
+  text-indent: 5%;
+}
+
+.crearCuenta {
+  max-width: 75%;
+}
+.crearCuenta img {
+  display: none;
+  position: absolute;
+}
+.crearCuenta__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.crearCuenta__form--div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0;
+}
+.crearCuenta__form--div input {
+  border: 2px solid gray;
+  transition: border 0.5s;
+  margin-left: 4px;
+}
+.crearCuenta__form--div input:focus {
+  border: 4px solid green;
+}
+.crearCuenta__form--fin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0;
+}
+.crearCuenta__form--fin label {
+  text-align: center;
+}
+.crearCuenta__form--fin input {
+  padding: 5%;
+  border-radius: 5px;
+}
+
+@media (min-width: 576px) {
+  .crearCuenta {
+    max-width: 80%;
+  }
+  .crearCuenta__form {
+    margin: 5px 0;
+  }
+  .crearCuenta__form--div {
+    flex-direction: row;
+  }
+  .crearCuenta__form--div label {
+    text-align: right;
+    width: 160px;
+  }
+  .crearCuenta__form--fin {
+    margin: 5px auto;
+  }
+}
+@media (min-width: 768px) {
+  .crearCuenta {
+    position: relative;
+  }
+  .crearCuenta img {
+    display: inline-block;
+    top: 30%;
+    left: -1%;
+    transform: rotate(-20deg) scale(0.7);
+    transition: transform 5s;
   }
 }
 

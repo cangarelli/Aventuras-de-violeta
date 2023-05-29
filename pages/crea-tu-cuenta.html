@@ -36,14 +36,14 @@
           <!-- Inicio Offcanvas -->
           <div class="offcanvas offcanvas-end barranav__offcanvas" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header barranav__offcanvas--title">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU PRINCIPAL.</h5>
+              <h2 class="offcanvas-title" id="offcanvasNavbarLabel">MENU PRINCIPAL.</h2>
               <img src="../assets/png/Pin.png" alt="Decoración" />
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body barranav__offcanvas--body">
               <ul class="navbar-nav justify-content flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/pages/sobre-el-juego.html">SOBRE EL JUEGO.</a>
+                  <a class="nav-link active" aria-current="page" href="./sobre-el-juego.html">SOBRE EL JUEGO.</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./estilos-de-aventura.html">ESTILOS DE AVENTURA.</a>
@@ -65,22 +65,56 @@
     </header>
     <!-- inicio Main -->
     <main>
-        
+      <section class="crearCuenta">
+        <h1>REGISTRA TUS DATOS</h1>
+        <img class="imgDeco2"src="../assets/jpg/Decoracion-foto.jpg" alt="Foto de personajes">
+        <h2>Tus datos serán utilizados a los fines de facilitar el desarrollo del juego y seran tratados con estrictos protocolos de seguridad. No seran compartidos con terceras personas.</h2>
+  
+        <form class="crearCuenta__form" action="php" method="post" enctype="text/plain">
+          <div class="crearCuenta__form--div">
+            <label for="email"><span>Correo Electronico:</span></label> 
+            <input type="email" placeholder="inclui el @" id="email"/>
+          </div>
+          <div class="crearCuenta__form--div">
+            <label for="nombreyapellido">Nombre y apeliido:</label>
+            <input type="text" placeholder="Nombre y apellido" id="nombreyapellido" />
+          </div>
+          <div class="crearCuenta__form--div">
+            <label for="Apodo">Apodo: </label>
+            <input type="text" placeholder="Como queres que te llame?" id="Apodo" />
+          </div>
+          <div class="crearCuenta__form--div">
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" placeholder="top secret" id="contraseña"/>
+          </div>
+          <div class="crearCuenta__form--div">
+            <label for="confirmarContraseña">Connfirmar contraseña:</label>
+            <input type="password" placeholder="Confirmar Top Secret" id="confirmarContraseña" />
+          </div>
+          <div class="crearCuenta__form--fin">
+            <input type="checkbox" id="terminosYCondiciones" /> 
+            <label for="terminosYCondiciones">Acepto los terminos y las condiciones</label>
+          </div>
+          <section class="crearCuenta__form--fin">
+            <input type="button" value="Crear cuenta" />
+          </section>
+        </form>
+      </section>     
     </main>
    <!-- inicio footer -->
    <footer class="pie">
      <div>
        <a href="#">
-         <img class="pie--icono" src="../assets/png/Icono-facebook.png" alt="Facebook">
+         <img class="pie--icono" src="../assets/png/Icono-facebook.png" alt="Facebook" />
        </a>
        <a href="#">
-         <img class="pie--icono" src="../assets/png/Icono-instagram.png" alt="Instagram">
+         <img class="pie--icono" src="../assets/png/Icono-instagram.png" alt="Instagram" />
        </a>
        <a href="#">
-         <img class="pie--icono" src="../assets/png/icono-mail.png" alt="Mail">
+         <img class="pie--icono" src="../assets/png/icono-mail.png" alt="Mail" />
        </a>
        <a href="#">
-         <img class="pie--icono" src="../assets/png/ANLU-PLAY.png" alt="Juguetería">
+         <img class="pie--icono" src="../assets/png/ANLU-PLAY.png" alt="Juguetería" />
        </a>
      </div>
      <p> &#169; Anlujuegos - Todos los derechos reservados.</p>
