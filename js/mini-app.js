@@ -68,12 +68,13 @@ function definirAccion() {
     console.log(accion)
 }
 function repartirGasto() {
-    for (let i=0; i<cantidad; i++) {
+    let respuesta = [];
+    for (let i = 0; i<cantidad; i++) {
         individual[i] = Math.abs(parseInt(individual[i]))
     }
-    for (let i=1; i<cantidad; i++) {
-        respuesta[0] = (`${participantes[0]} tiene que ${accion[0]} $ ${individual[0]} pesos`)
-        respuesta[i] = (` ${participantes[i]} tiene que ${accion[i]} $ ${individual[i]} pesos`)
+    respuesta[0] = (`${participantes[0]} tiene que ${accion[0]} $ ${individual[0]} pesos`)
+    for (let n=1; n<cantidad; n++) {
+        respuesta[n] = (` ${participantes[n]} tiene que ${accion[n]} $ ${individual[n]} pesos`)
     }
     alert(respuesta)
 }
